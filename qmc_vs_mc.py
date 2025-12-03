@@ -4,7 +4,7 @@ import random
 from scipy.stats.qmc import Sobol
 
 # -------------------------------------------------
-# Reuse your convergence function
+# Reusing the convergence function for clearer code (could have imported it)
 def convergence(points):
     estimates = []
     inside = 0
@@ -15,9 +15,11 @@ def convergence(points):
     return estimates
 
 # -------------------------------------------------
-# Point generators
+# normal monte carlo point generator (random)
 def generate_random_points(n_points):
     return [(random.uniform(-1, 1), random.uniform(-1, 1)) for _ in range(n_points)]
+
+# qmc point generator
 
 def generate_sobol_points(n_points):
 
@@ -37,7 +39,7 @@ def compare_mc_qmc(n_points):
     mc_points = generate_random_points(n_points)
     qmc_points = generate_sobol_points(n_points)
 
-    # sequential estimates for mc and qmcc
+    # convergences of estimates for mc and qmcc
     mc_estimates = convergence(mc_points)
     qmc_estimates = convergence(qmc_points)
 
@@ -70,3 +72,4 @@ def compare_mc_qmc(n_points):
 if __name__ == "__main__":
    n = 850
    compare_mc_qmc(n)
+
