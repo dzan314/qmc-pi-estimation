@@ -4,14 +4,14 @@ from scipy.stats.qmc import Sobol
 
 # ---------------------------------------
 
-# generating <n> random points in 2x2 square
+# generating <n> points in 2x2 square
 
 def generate_points(n_points):
 
     base = Sobol(d=2, scramble=False)
     samples = base.random(n_points)
 
-    sq_points = [(2*a - 1, 2*b - 1) for a,b in samples]
+    sq_points = [(2*a - 1, 2*b - 1) for a,b in samples] # sobol picks points in [0, 1]; they have to be rescaled to the 2x2 square size
 
     return sq_points
 
@@ -60,7 +60,7 @@ def convergence(points):
 
 # ---------------------------------------
 
-# plotting the random <n> points to visualize the square and the circle 
+# plotting the scattered <n> points to visualize the square and the circle 
 
 def plot_points(inside, outside):
 
@@ -76,6 +76,8 @@ def plot_points(inside, outside):
     plt.gca().set_aspect("equal")
     plt.title("Quasi-Monte Carlo π Estimation")
     plt.show()
+
+# plot the scatter plot side by side with the convergence plot
 
 def both_plots(points):
 
@@ -114,4 +116,5 @@ if __name__ == "__main__":
 
     n = 850
     number_of_points = generate_points(n)
+
     both_plots(number_of_points)
