@@ -20,8 +20,10 @@ points using the Sobol sequence)
 - QMC and MC convergence plots
 - Scatter plot, a visualization of samples picked by Sobol’s QMC
 
+The estimations are based on the area ratio of a circle inscribed in a 2x2 sqaure and this square. Using the Law of Large Numbers, this ratio can be transformed into the ratio of sampled points: points inside the circle vs points outside. 
+Formulas and exact methodology can be found in the second "readme" file (pdf)
 
-## Methodology 
+## Usage
 
 
 
