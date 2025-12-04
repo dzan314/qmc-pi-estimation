@@ -25,12 +25,13 @@ Exact methodology, explanation and formulas can be found in the second "readme" 
 
 ## Usage
 
-
+```bash
+pi_estimate_main.py
+```
 
 
 ## TODO:
 ``` bash
-add comments,
 add LaTex readme.pdf
 fill readme.md
 ```
