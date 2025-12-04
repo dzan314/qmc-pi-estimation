@@ -11,6 +11,19 @@ terministic sampling approaches. At the same time, it helps further develop my
 Python programming skills and lays the foundation for more complex, statistic-
 heavy topics.
 
+## Features
+
+
+- Sobol QMC (deterministic version of MC, which chooses evenly spaced
+points using the Sobol sequence)
+- Classic MC (helper, used in convergence plots)
+- QMC and MC convergence plots
+- Scatter plot, a visualization of samples picked by Sobol’s QMC
+
+
+## Methodology 
+
+
 
 
 ## TODO:
