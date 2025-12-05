@@ -25,10 +25,12 @@ Exact methodology, explanation and formulas can be found in the second "readme" 
 
 ## Usage
 
+Run in your terminal:
+
 ```bash
 pi_estimate_main.py
 ```
-
+Input the desired number of samples on which the simulation will run. All the graph will appear (scatter plot and three convergence graphs in total)
 
 ## TODO:
 ``` bash
