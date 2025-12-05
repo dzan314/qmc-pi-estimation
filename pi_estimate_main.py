@@ -7,8 +7,9 @@ from qmc_vs_mc import compare_mc_qmc
 
 if __name__ == "__main__":
 
-  n = 1024
+  n = int(input("Input the number of points you want to run the simulation on "))
   points = generate_points(n)
   both_plots(points)
   compare_mc_qmc(n)
+
 
