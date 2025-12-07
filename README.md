@@ -44,8 +44,7 @@ pip install scikitlearn
 ## Future Work
 - explore the differences in convergence rates of QMC and MC more
 - explore how Sobol QMC performs vs MC in higher dimensions
-- add "live" pi value estimation counter
-
+- work on error bounds of QMC (Koksma–Hlawka inequality)
 
 ## License
 
